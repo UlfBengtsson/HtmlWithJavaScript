@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Html & JavaScript</title>
+  </head>
+  <body>
+    <h1 id="firstH1" class="goldText">not a good text</h1>
+    <h1 class="goldText">not a good text</h1>
+
+    <ul id="myList">
+      <li>i was first!</li>
+    </ul>
+    <script>
+      //document.getElementsByTagName("h1")[0].innerHTML = "Good text";
+
+      document.getElementById("firstH1").innerHTML = "Happy text";
+
+      var goldenElements = document.getElementsByClassName("goldText");
+
+      for (i = 0; i < goldenElements.length; i++) {
+        goldenElements[i].style.color = "magenta";
+      }
+
+      var myLi = document.createElement("li");
+      myLi.innerHTML = "random text";
+
+      document.getElementById("myList").appendChild(myLi);
+    </script>
+  </body>
+</html>
